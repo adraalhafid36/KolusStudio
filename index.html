@@ -3,113 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOLUS STUDIO - Original Cartoon Illustration</title>
+    <title>PokéStats | Tournament Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fcfcfc;
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background-color: #060b14; 
+            color: #e2e8f0; 
         }
-        .heading-font {
-            font-family: 'Archivo Black', sans-serif;
-            text-transform: uppercase;
+        .pokemon-card {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid #334155;
         }
-        .modern-card {
-            background: white;
-            border-radius: 32px;
-            /* Border tipis 1px dengan warna abu-abu sangat muda */
-            border: 1px solid #e5e7eb; 
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .modern-card:hover {
-            transform: translateY(-8px);
-            border-color: #d1d5db; /* Border sedikit lebih gelap saat hover */
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
-        }
+        .type-fire { border-bottom: 4px solid #ef4444; }
+        .type-water { border-bottom: 4px solid #3b82f6; }
+        .type-grass { border-bottom: 4px solid #10b981; }
+        .type-electric { border-bottom: 4px solid #f59e0b; }
     </style>
 </head>
-<body class="p-6 md:p-10">
+<body class="pb-10">
 
-    <div class="max-w-7xl mx-auto space-y-10">
-        
-        <header class="modern-card overflow-hidden flex flex-col md:flex-row bg-white">
-            <div class="p-10 md:w-3/5 flex flex-col justify-center">
-                <div class="inline-block bg-yellow-400 rounded-2xl px-4 py-2 w-fit mb-6">
-                    <span class="heading-font text-black text-xl">ORIGINAL ART</span>
-                </div>
-                <h1 class="heading-font text-6xl md:text-8xl leading-tight mb-6 text-gray-900">
-                    KOLUS<br><span class="text-blue-600">STUDIO</span>
-                </h1>
-                <p class="text-lg font-medium text-gray-600 max-w-md">
-                    Menghidupkan imajinasi melalui ilustrasi kartun original tanpa campur tangan AI.
-                </p>
+    <!-- Header & Stats -->
+    <nav class="p-6 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50 border-b border-slate-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-red-500 rounded-full border-4 border-slate-900 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+                <h1 class="text-xl font-extrabold tracking-tight italic">POKÉ<span class="text-red-500">STATS</span></h1>
             </div>
-            <div class="md:w-2/5 bg-blue-50 min-h-[350px] flex items-center justify-center relative border-l border-gray-100">
-                <div class="text-blue-200 heading-font text-3xl rotate-12">Original Artwork</div>
-                <div class="absolute bottom-6 right-6 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
-                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Authentic Style</p>
-                    <p class="font-bold text-gray-800">100% Hand-Drawn</p>
-                </div>
+            <div class="flex gap-4">
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Round 3 of 6
+                </span>
             </div>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="modern-card bg-[#BDFF00] p-8">
-                <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-6">
-                    <span class="text-white font-bold text-xl">!</span>
-                </div>
-                <h2 class="heading-font text-3xl mb-4 text-gray-900">NO AI POLICY</h2>
-                <p class="font-bold text-gray-800">Setiap garis adalah goresan tangan digital yang murni, menjaga jiwa dan keaslian dalam setiap karya kartun kami.</p>
-            </div>
-
-            <div class="modern-card bg-[#7000FF] p-8 text-white flex flex-col justify-between">
-                <h2 class="heading-font text-3xl mb-6 opacity-90">TRACK RECORD</h2>
-                <div>
-                    <span class="heading-font text-7xl">150+</span>
-                    <p class="font-bold text-lg mt-2 italic text-purple-200">Karya telah diselesaikan</p>
-                </div>
-            </div>
-
-            <div class="modern-card p-8 flex flex-col justify-center items-center text-center bg-white">
-                <div class="text-yellow-400 text-5xl mb-2">★★★★★</div>
-                <span class="heading-font text-6xl text-gray-900">4.8</span>
-                <p class="font-bold text-sm uppercase tracking-widest text-gray-400 mt-2">Client Satisfaction Rating</p>
-            </div>
-
-            <div class="modern-card bg-blue-600 p-10 md:col-span-2 text-white flex flex-col justify-center relative overflow-hidden">
-                <div class="relative z-10">
-                    <p class="uppercase font-bold text-xs mb-3 opacity-70">Our Craft</p>
-                    <h2 class="heading-font text-3xl md:text-5xl leading-tight">
-                        EKSPRESI BEBAS DENGAN SENTUHAN <span class="text-yellow-300">ORIGINAL DIGITAL</span> UNTUK HASIL YANG UNIK.
-                    </h2>
-                </div>
-                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-blue-500 rounded-full opacity-50"></div>
-            </div>
-
-            <div class="modern-card p-8 bg-gray-900 text-white">
-                <h2 class="heading-font text-2xl mb-6">GENRE</h2>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                        <span class="font-bold">Cartoon Style</span>
-                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Primary</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                        <span class="font-bold">Freehand Digital</span>
-                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Method</span>
-                    </div>
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-                        <span class="font-bold">Original Art</span>
-                        <span class="text-xs bg-gray-800 px-2 py-1 rounded">Quality</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </nav>
+
+    <!-- Tournament Info -->
+    <header class="container mx-auto px-6 pt-12 pb-8">
+        <div class="bg-gradient-to-r from-red-600/20 to-blue-600/20 p-8 rounded-3xl border border-slate-700/50">
+            <h2 class="text-3xl font-bold mb-2">Regional League: Scarlet & Violet</h2>
+            <p class="text-slate-400 mb-6 uppercase tracking-widest text-sm font-semibold">Standard Format • 40 Masters Division</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-slate-900/60 p-4 rounded-xl">
+                    <p class="text-slate-500 text-xs uppercase">Total Players</p>
+                    <p class="text-2xl font-bold">40/40</p>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl">
+                    <p class="text-slate-500 text-xs uppercase">Next Match</p>
+                    <p class="text-2xl font-bold text-red-400">14:30</p>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl">
+                    <p class="text-slate-500 text-xs uppercase">Format</p>
+                    <p class="text-2xl font-bold text-blue-400">Swiss</p>
+                </div>
+                <div class="bg-slate-900/60 p-4 rounded-xl">
+                    <p class="text-slate-500 text-xs uppercase">Top Cut</p>
+                    <p class="text-2xl font-bold text-amber-400">Top 8</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Pairings (Meja Pertandingan) -->
+        <div class="lg:col-span-2">
+            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-swords text-red-500"></i> Pairings Round 3
+            </h3>
+            
+            <div class="space-y-3">
+                <!-- Meja 1 -->
+                <div class="pokemon-card p-4 rounded-2xl flex items-center justify-between hover:scale-[1.01] transition-transform cursor-pointer">
+                    <div class="flex flex-col">
+                        <span class="text-xs text-slate-500 font-bold uppercase">Table 01</span>
+                        <span class="font-bold text-lg text-emerald-400">Adra Alhafid <span class="text-slate-500 font-normal text-sm">(6 pts)</span></span>
+                    </div>
+                    <div class="px-4 font-black italic text-slate-700">VS</div>
+                    <div class="flex flex-col text-right">
+                        <span class="text-xs text-slate-500 font-bold uppercase text-right">Opponent</span>
+                        <span class="font-bold text-lg">Rival Name <span class="text-slate-500 font-normal text-sm">(6 pts)</span></span>
+                    </div>
+                </div>
+
+                <!-- Meja 2 -->
+                <div class="pokemon-card p-4 rounded-2xl flex items-center justify-between opacity-80">
+                    <div class="flex flex-col">
+                        <span class="text-xs text-slate-500 font-bold uppercase">Table 02</span>
+                        <span class="font-bold text-lg">Player 03</span>
+                    </div>
+                    <div class="px-4 font-black italic text-slate-700">VS</div>
+                    <div class="flex flex-col text-right">
+                        <span class="text-xs text-slate-500 font-bold uppercase text-right">Opponent</span>
+                        <span class="font-bold text-lg">Player 04</span>
+                    </div>
+                </div>
+
+                <!-- Info 40 Orang -->
+                <div class="bg-slate-900/30 border border-dashed border-slate-800 p-4 rounded-xl text-center text-slate-500 text-sm">
+                    Terdapat 20 Meja aktif (Meja 01 - 20) untuk 40 Peserta.
+                </div>
+            </div>
+        </div>
+
+        <!-- Standings / Leaderboard -->
+        <div class="lg:col-span-1">
+            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-trophy text-amber-500"></i> Standings
+            </h3>
+            <div class="bg-slate-900/80 rounded-2xl border border-slate-800 overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-slate-800/50">
+                        <tr>
+                            <th class="p-3 text-left">#</th>
+                            <th class="p-3 text-left">Player</th>
+                            <th class="p-3 text-center">Record</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr class="hover:bg-slate-800/30">
+                            <td class="p-3 font-bold text-amber-400">1</td>
+                            <td class="p-3 font-semibold text-slate-200">Adra Alhafid</td>
+                            <td class="p-3 text-center">2 - 0 - 0</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30">
+                            <td class="p-3 font-bold">2</td>
+                            <td class="p-3">Player X</td>
+                            <td class="p-3 text-center">2 - 0 - 0</td>
+                        </tr>
+                        <!-- Baris lainnya... -->
+                    </tbody>
+                </table>
+                <div class="p-4 text-center bg-slate-800/20">
+                    <a href="#" class="text-blue-400 text-xs font-bold uppercase hover:underline">Lihat Semua Standings</a>
+                </div>
+            </div>
+
+            <!-- Meta Deck Share -->
+            <div class="mt-8 bg-blue-900/20 border border-blue-500/30 p-5 rounded-2xl">
+                <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-clone text-blue-400"></i> Deck Breakdown (Top 40)
+                </h4>
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs">
+                        <span>Charizard ex</span>
+                        <span class="font-bold">12 Players</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-red-500 h-full" style="width: 30%"></div>
+                    </div>
+                    
+                    <div class="flex justify-between text-xs pt-2">
+                        <span>Gardevoir ex</span>
+                        <span class="font-bold">8 Players</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-purple-500 h-full" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 text-center text-slate-600 text-xs">
+        <p>Pokémon TCG Tournament Tracker &copy; 2026</p>
+        <p class="mt-1">Pokémon and its trademarks are property of Nintendo/The Pokémon Company.</p>
+    </footer>
 
 </body>
 </html>
